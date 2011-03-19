@@ -1,0 +1,33 @@
+	<div>
+		<% @posts.each do |post| %>
+		<tr>
+		<td>
+			<div class="cellcontent">
+				<p>
+					<%=  post.text  %>
+				</p>
+			</div><!-- cellcontent -->
+
+			<table>
+			    <% post.comments.each do |comm| %>
+				<tr>
+					<td>
+						<div>
+							<p>
+								<%=  comm.text  %>
+							</p>
+						</div><!-- cellcontent -->
+					</td>
+				</tr>
+			    <% end %><!-- end of loop for comments -->
+			</table>
+			<div>
+				<h2>Add a Comment</h2>
+				 
+			</div>
+		<% end %>
+		</td>
+		</tr>
+
+	</div>
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Emporium
+Version    : 1.0
+Released   : 20090222
+Description: A two-column, fixed-width and lightweight template ideal for 1024x768 resolutions. Suitable for blogs and small websites.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mobile Wingman</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="stylesheets/default.css" rel="stylesheet" type="text/css" />
+<div><img src="../images/logo2.png" style="height:100px;width=100px"/></div>
+</head>
+<body>
+<div id="wrapper">
+<!-- start header -->
+
+<div id="logo">
+	<!--<h1><a href="#">MobileWingman </a></h1>-->
+	
+	<h2> &raquo;&nbsp;&nbsp;&nbsp;A mobile solution to memory management</h2>
+</div>
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="#">Home</a></li>
+			<li><%= link_to "Overview", "layoust/overview" %></li>
+			<li><a href="#">Photos</a></li>
+			<li><a href="#">Media</a></li>
+			<li><a href="#">Blog</a></li>
+			<li class="last"><a href="#">About Us</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+</div>
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title">About Us </h1>
+			<div class="entry">
+				<tr>
+					<td style="width=33%">
+						<img src="images/dan.jpg" style="height:200px;width:150px;"/>
+					</td>
+					<td>
+					Daniel Sauerbrun is a Senior at University of California Santa Barbara who enjoys longs walks on the beach.
+					</td>
+				</tr>
+			</div>
+			<!--<div class="meta">
+				<p class="links"><a href="#" class="more">Read full article</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
+			</div>-->
+		</div>
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Recent Blog Posts</h2>
+				<ul>
+				     <% for i in 0..6 #try and post 7 posts%>
+					<% if not @posts[i].nil? %>
+					    <li>
+						<%= link_to (@posts[i].title.to_s + " (by " + @posts[i].author + ")"), @posts[i] %>
+					    </li>
+					<% end %>
+  				     <% end # loop of posts %>
+					<!--<li><a href="#">Fusce dui neque fringilla</a></li>
+					<li><a href="#">Eget tempor eget nonummy</a></li>
+					<li><a href="#">Magna lacus bibendum mauris</a></li>
+					<li><a href="#">Nec metus sed donec</a></li>
+					<li><a href="#">Magna lacus bibendum mauris</a></li>
+					<li><a href="#">Velit semper nisi molestie</a></li>
+					<li><a href="#">Eget tempor eget nonummy</a></li>-->
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+	<p id="legal">( c ) 2008. All Rights Reserved. <a href="http://www.freecsstemplates.org/">Bestfriends</a> designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+<!-- end footer -->
+</body>
+</html>
+
